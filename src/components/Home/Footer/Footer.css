@@ -1,0 +1,14 @@
+.backgroundImg {
+    /* background-image: url("../../../images/FooterBgImg.png"); */
+    height: 100vh;
+    /* width: 100%; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    /* border: 10px solid rgb(46, 26, 226); */
+}
+.FooterTopStyle {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}

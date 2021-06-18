@@ -1,0 +1,14 @@
+.ReviewBack {
+    /* background-image: url("../../../images/FooterBgImg.png"); */
+    height: 100vh;
+    /* width: 100%; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(138, 132, 132, 0.171)
+    /* border: 10px solid rgb(46, 26, 226); */
+}
+.ReviewsTopStyle {
+    background-color: rgb(117, 117, 117);
+    color: rgb(255, 255, 255);
+}
