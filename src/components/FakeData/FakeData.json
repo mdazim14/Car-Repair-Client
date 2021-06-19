@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Contactless Washing",
+        "description": "Vestibulum tortor risus, rutrum at congue sed ultricies finibus.",
+        "img": "https://s1.im.ge/2021/06/19/XME31.jpg",
+        "background": "danger",
+        "price": 12500
+    },
+    {
+        "id": 2,
+        "title": "Safety Materials",
+        "description": "Cras aliquam tristique metus, eu gravida diam vestibulum gravida.",
+        "img": "https://s2.im.ge/2021/06/19/XMbtr.jpg",
+        "background": "danger",
+        "price": 22800
+
+    },
+    {
+        "id": 3,
+        "title": "Modern Equipment",
+        "description": "Fusce maximus molestie nisl, ut dapibus libero vestibulum aliquam.",
+        "img": "https://s1.im.ge/2021/06/19/XMckW.jpg",
+        "background": "danger",
+        "price": 72200
+
+    },
+    {
+        "id": 4,
+        "title": "Extensive Cleaning",
+        "description": "Sestibulum non dolor sit amet mi moles tincidunt vel non velit.",
+        "img": "https://s2.im.ge/2021/06/19/XM8F0.jpg",
+        "background": "danger",
+        "price": 33200
+
+    }
+]
