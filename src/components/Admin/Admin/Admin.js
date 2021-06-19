@@ -3,7 +3,7 @@ import React from 'react';
 const Admin = () => {
     return (
         <div>
-            This is admin
+            <h1>This is admin component</h1>
         </div>
     );
 };

@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact';
 // import Book from './components/Dashboard/Book/Book';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Login from './components/Login/Login';
+import Navigationbar from './components/Home/Navigationbar/Navigationbar';
 
 
 export const userContext = createContext();
@@ -20,9 +21,13 @@ function App() {
     <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
 
       <Router>
+      <Navigationbar></Navigationbar>
         <Switch>
           <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/home">
+          <Home></Home>
           </Route>
           <Route path="/contact">
             <Contact></Contact>

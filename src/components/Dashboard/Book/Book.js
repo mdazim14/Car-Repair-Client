@@ -12,15 +12,15 @@ const Book = () => {
     // console.log(id);
     // console.log(FakeData);
 
-    const booking = FakeData.find( service => service.id == id);
-    // console.log(booking);
+    const booking = FakeData.find( service => parseInt(service.id) === parseInt(id));
+    console.log(booking);
 
     const  handleCheckOut = () => {
         console.log("Check Out button");
-        // const orderDate = { currentTime: new Date().toLocaleString() };
-        const oderDetails = {Product: booking};
+        const orderDate = new Date().toLocaleString();
+        const oderDetails = { Product: booking, orderDate: orderDate};
 
-        fetch('http://localhost:5059/bookService', {
+        fetch('http://localhost:3011/bookService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const Book = () => {
         .then(data => {
             if(data){
                 alert('Your Order Placed successfully');
-                history.push('/home');
+                history.push('/');
             }
         })
     }
@@ -65,7 +65,10 @@ const Book = () => {
                         </tbody>
 
                     </Table>
-                    <button onClick={()=>{handleCheckOut()}} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
+
+{ booking &&                 
+   <button onClick={()=>{handleCheckOut()}} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
+}                    
                 </div>
             </div>             
         </div>

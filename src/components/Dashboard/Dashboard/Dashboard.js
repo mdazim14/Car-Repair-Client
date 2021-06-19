@@ -12,13 +12,13 @@ import Book from '../Book/Book';
 import Home from '../../Home/Home/Home';
 import OrderList from '../../Admin/OrderList/OrderList';
 import AddReviews from '../../Reviews/AddReview';
+import BookingLists from '../../Dashboard/BookingLists/BookingLists';
 
 const Dashboard = () => {
     return (
         <div>
 
             <Router>
-                {/* <Navigationbar></Navigationbar> */}
 
                 <div className="d-flex">
 
@@ -28,10 +28,10 @@ const Dashboard = () => {
 
                     <div className="col-md-10 mainbarDesign">
                         <Switch>
-
+{/* 
                             <Route exact path="/">
                                 <Home></Home>
-                            </Route>
+                            </Route> */}
                             {/* <Route path="/contact">
                                 <Contact></Contact>
                             </Route> */}
@@ -47,6 +47,9 @@ const Dashboard = () => {
                             </Route>
                             <Route exact path="/dashboard/addReviews">
                                 <AddReviews></AddReviews>
+                            </Route>
+                            <Route exact path="/dashboard/bookList">
+                                <BookingLists></BookingLists>
                             </Route>
 
                         </Switch>

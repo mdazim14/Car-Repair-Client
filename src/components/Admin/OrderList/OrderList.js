@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap'
 const OrderList = () => {
+    
     return (
         <div>
             <Table striped bordered hover variant="danger">

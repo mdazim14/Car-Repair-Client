@@ -13,7 +13,7 @@ const Navigationbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { displayName, photoURL, email } = loggedInUser;
     return (
-        <Navbar style={{ backgroundColor: 'rgba(0,0,0,1', opacity: '0.7' }} className="pl-5 pr-5" collapseOnSelect expand="lg" fixed='top'>
+        <Navbar style={{ backgroundColor: 'rgba(0,0,0,1', opacity: '0.7' }} className="pl-5 pr-5" collapseOnSelect expand="lg">
             <Navbar.Brand className="bg-dark text-warning rounded p-2 font-weight-bold" to="#home">Car-Repair</Navbar.Brand>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
