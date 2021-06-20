@@ -1,18 +1,19 @@
 import React from 'react';
 import AllProducts from '../../AllProducts/AllProducts';
 import HeaderMain from '../HeaderMain/HeaderMain';
-import Services from '../Services/Services';
 import Contact from '../../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Reviews from '../../Reviews/Reviews';
+import AllNews from '../NewsComponent/AllNews';
 
 const Header = () => {
     return (
         <div>
             
             <HeaderMain></HeaderMain>
-            <Services></Services>
             <AllProducts></AllProducts>
+            <AllNews></AllNews>
+
             <Reviews></Reviews>
             <Contact></Contact>
             <Footer></Footer>

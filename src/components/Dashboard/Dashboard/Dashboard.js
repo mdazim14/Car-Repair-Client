@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    useParams
 } from "react-router-dom";
 import Sidebar from '../Sidebar/Sidebar';
 import './Dashboard.css';
@@ -13,6 +14,7 @@ import Home from '../../Home/Home/Home';
 import OrderList from '../../Admin/OrderList/OrderList';
 import AddReviews from '../../Reviews/AddReview';
 import BookingLists from '../../Dashboard/BookingLists/BookingLists';
+import AddProduct from '../../AllProducts/AddProduct';
 
 const Dashboard = () => {
     return (
@@ -28,28 +30,21 @@ const Dashboard = () => {
 
                     <div className="col-md-10 mainbarDesign">
                         <Switch>
-{/* 
-                            <Route exact path="/">
-                                <Home></Home>
-                            </Route> */}
-                            {/* <Route path="/contact">
-                                <Contact></Contact>
-                            </Route> */}
-                            {/* <Route path="/login">
-                                <Login></Login>
-                            </Route> */}
-
-                            <Route exact path="/dashboard/book/:id">
-                                <Book></Book>
+                            <Route path="/dashboard/bookService/:id">
+                                <Book ></Book>
                             </Route>
-                            <Route exact path="/dashboard/orderlist">
+
+                            <Route  path="/dashboard/orderlist">
                                 <OrderList></OrderList>
                             </Route>
-                            <Route exact path="/dashboard/addReviews">
+                            <Route  path="/dashboard/addReviews">
                                 <AddReviews></AddReviews>
                             </Route>
-                            <Route exact path="/dashboard/bookList">
+                            <Route  path="/dashboard/bookList">
                                 <BookingLists></BookingLists>
+                            </Route>
+                            <Route  path="/dashboard/addProduct">
+                                <AddProduct></AddProduct>
                             </Route>
 
                         </Switch>

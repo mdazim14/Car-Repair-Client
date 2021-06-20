@@ -19,17 +19,17 @@ const Navigationbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto">
-                    <Link className="nav-link mr-3 ml-3 bg-danger rounded font-weight-bold text-white" to="/home">Home</Link>
-                    <Link className="nav-link mr-3 ml-3 bg-danger rounded font-weight-bold text-white" to="">About Us</Link>
-                    <Link className="nav-link mr-3 ml-3 bg-danger rounded font-weight-bold text-white" to="/contact">Contact</Link>
-                    <Link className="nav-link mr-3 ml-3  bg-danger rounded font-weight-bold text-white" to="/dashboard/book">Dashboard</Link>
+                    <Link className="nav-link mr-3 ml-3 bg-info rounded font-weight-bold text-white" to="/home">Home</Link>
+                    <Link className="nav-link mr-3 ml-3 bg-info rounded font-weight-bold text-white" to="">About Us</Link>
+                    <Link className="nav-link mr-3 ml-3 bg-info rounded font-weight-bold text-white" to="/contact">Contact</Link>
+                    <Link className="nav-link mr-3 ml-3  bg-info rounded font-weight-bold text-white" to="/dashboard/bookService">Dashboard</Link>
                     {
                         displayName && <h6 className="nav-link pt-3  text-white  bg-info rounded">{displayName}</h6>
                     }
 
                     {
                         displayName ? <Link className="nav-link ml-5 p-3 bg-primary text-white  rounded font-weight-bold" to="/login" onClick={() => setLoggedInUser({})}> Log Out </Link> :
-                            <Link className="nav-link mr-5 ml-5 p-3 bg-warning bg-warning rounded font-weight-bold text-white" to="/login" >Login</Link>
+                            <Link className="nav-link mr-5 ml-5 p-3 bg-warning bg-warning rounded font-weight-bold text-dark" to="/login" >Login</Link>
                     }
                 </Nav>
             </Navbar.Collapse>

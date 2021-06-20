@@ -1,24 +1,30 @@
 import React, { useContext, useEffect, useState } from 'react';
-// import { useParams } from 'react-router';
-// import PaymentCardBox from '../PaymentCardBox/PaymentCardBox';
 import { Table } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
 // import { userContext } from '../../../App';
-import FakeData from '../../FakeData/FakeData.json';
 
 const Book = () => {
     const history = useHistory();
-    const {id} = useParams();
-    // console.log(id);
-    // console.log(FakeData);
+    const { id } = useParams();
 
-    const booking = FakeData.find( service => parseInt(service.id) === parseInt(id));
+    console.log(id);
+    // console.log(FakeData);
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3011/bookings')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
+
+    const booking = services.find(service => parseInt(service._id) === parseInt(id));
     console.log(booking);
 
-    const  handleCheckOut = () => {
+
+    const handleCheckOut = () => {
         console.log("Check Out button");
         const orderDate = new Date().toLocaleString();
-        const oderDetails = { Product: booking, orderDate: orderDate};
+        const oderDetails = { Product: booking, orderDate: orderDate };
 
         fetch('http://localhost:3011/bookService', {
             method: 'POST',
@@ -27,13 +33,13 @@ const Book = () => {
             },
             body: JSON.stringify(oderDetails)
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data){
-                alert('Your Order Placed successfully');
-                history.push('/');
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    alert('Your Order Placed successfully');
+                    history.push('/');
+                }
+            })
     }
 
     // const [loggedInUser, setLoggedInUser] = useContext(userContext);
@@ -59,18 +65,18 @@ const Book = () => {
                             <tr>
                                 <td>1</td>
                                 <td>User Name</td>
-                                <td>{booking?.title}</td>
-                                <td>{booking?.price}</td>
+                                <td>{booking?.Product?.title}</td>
+                                <td>{booking?.Product?.price}</td>
                             </tr>
                         </tbody>
 
                     </Table>
 
-{ booking &&                 
-   <button onClick={()=>{handleCheckOut()}} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
-}                    
+                    {booking &&
+                        <button onClick={() => { handleCheckOut() }} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
+                    }
                 </div>
-            </div>             
+            </div>
         </div>
     );
 };

@@ -1,28 +1,35 @@
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router-dom';
 import { userContext } from '../../App';
 
 const AddReview = () => {
+    const history = useHistory();
+
     
-    const [loggedInUser,setLoggedInUser] = useContext(userContext);
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit=(data)=>{
-        // data.image=loggedInUser.photoURL;
+        data.image= loggedInUser.photoURL;
         // console.log(data);
-        // fetch('http://localhost:5000/addReviews',{
-        //     method:'POST',
-        //     headers:{'content-type':'application/json'},
-        //     body:JSON.stringify(data)
+        
+        fetch('http://localhost:3011/addReviews',{
+            method:'POST',
+            headers:{
+                'Content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
 
-        // })
-        // .then(res=>res.json())
-        // .then(succ=>{
-        //     if(succ){
-        //         alert('data inserted successfully');
-        //     }
-        // })
+        })
+        .then(res=>res.json())
+        .then(result=>{
+            if(result){
+                alert('Your Review inserted successfully');
+                history.push('/');
+            }
+        })
     }
     return (
         <div>
