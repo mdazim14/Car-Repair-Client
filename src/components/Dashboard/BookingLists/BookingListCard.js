@@ -9,8 +9,7 @@ console.log(props);
             <td>{props?.count}</td>
             <td>Mahee Joshor</td>
             <td>azim14@gmail.com</td>
-            <td>{props?.products?.title}</td>
-            <td>{props?.products?.price}</td>
+            <td>{props?.products?.serviceName}</td>
             <td>{props?.products?.price}</td>
             <td>{props?.products?.orderDate}</td>
         </tr>

@@ -1,31 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
+
 // import { userContext } from '../../../App';
 
 const Book = () => {
     const history = useHistory();
     const { id } = useParams();
-
-    console.log(id);
-    // console.log(FakeData);
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3011/bookings')
+        fetch('http://localhost:3011/getServiceItem')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
-    const booking = services.find(service => parseInt(service._id) === parseInt(id));
+    const booking = services.find(service => service._id === id);
     console.log(booking);
-
 
     const handleCheckOut = () => {
         console.log("Check Out button");
         const orderDate = new Date().toLocaleString();
-        const oderDetails = { Product: booking, orderDate: orderDate };
-
+        booking.orderDate = orderDate;
+        const oderDetails = { Product: booking };
         fetch('http://localhost:3011/bookService', {
             method: 'POST',
             headers: {
@@ -41,10 +38,6 @@ const Book = () => {
                 }
             })
     }
-
-    // const [loggedInUser, setLoggedInUser] = useContext(userContext);
-    // const { id } = useParams();
-    // const [services, setServices] = useState([]);
 
     return (
         <div className="mt-5 mb-5 border">
@@ -65,11 +58,10 @@ const Book = () => {
                             <tr>
                                 <td>1</td>
                                 <td>User Name</td>
-                                <td>{booking?.Product?.title}</td>
-                                <td>{booking?.Product?.price}</td>
+                                <td>{booking?.serviceName}</td>
+                                <td>{booking?.price}</td>
                             </tr>
                         </tbody>
-
                     </Table>
 
                     {booking &&

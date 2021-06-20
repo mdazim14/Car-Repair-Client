@@ -14,8 +14,6 @@ const AllProducts = () => {
             })
     }, [])
 
-
-
     return (
         <div>
             <div>
@@ -25,8 +23,11 @@ const AllProducts = () => {
                     </div>
                 </div>
             </div>
-            {/* <div style={{ height: '600px' }} className="ReviewBack d-flex flex-wrap d-flex justify-content-center align-items-center"> */}
+
+{/* <div style={{ height: '600px' }} className="ReviewBack d-flex flex-wrap d-flex justify-content-center align-items-center"> */}
+
             <CardDeck className=" m-auto d-flex justify-content-center align-items-center flex-wrap">
+                
                 <div className="d-flex mt-5 mb-5 flex-wrap">
                     {
                         reviews.map(product => <ProductCard products={product} key={product._id}></ProductCard>)
@@ -35,7 +36,7 @@ const AllProducts = () => {
 
             </CardDeck>
 
-            {/* </div> */}
+{/* </div> */}
         </div>
     );
 };

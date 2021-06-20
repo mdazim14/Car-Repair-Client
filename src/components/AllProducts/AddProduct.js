@@ -12,7 +12,7 @@ const AddProduct = () => {
 
     const onSubmit = (data) => {
         data.image = loggedInUser.photoURL;
-        // console.log(data);
+        console.log("added ", data);
 
         fetch('http://localhost:3011/addServiceItem', {
             method: 'POST',
@@ -25,7 +25,7 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(result => {
                 if (result) {
-                    alert('Your Product added successfully');
+                    alert('Your Service added successfully');
                 }
             })
     }

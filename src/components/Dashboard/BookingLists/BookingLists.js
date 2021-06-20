@@ -11,17 +11,14 @@ const BookingLists = (props) => {
 
     const [status, setStatus] = useState({});
 
-    
-    // const history = useHistory(); 
-    // const { title, price, wight } = bookingList.Products;
-
-
     useEffect(() => {
         fetch('http://localhost:3011/bookings')
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, [])
     let count = 1;
+    // console.log("Boking list",bookingList);
+
 
     // const deleteProduct = (id) => {
     //     fetch(`http://localhost:3011/${id}`, {
@@ -29,9 +26,9 @@ const BookingLists = (props) => {
     //     })
     //         .then(res => res.json())
     //         .then(result => {
-
     //         })
     // }
+
 
     return (
         <div>
