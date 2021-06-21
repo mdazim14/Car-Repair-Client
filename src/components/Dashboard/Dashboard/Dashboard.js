@@ -14,7 +14,7 @@ import Home from '../../Home/Home/Home';
 import OrderList from '../../Admin/OrderList/OrderList';
 import AddReviews from '../../Reviews/AddReview';
 import BookingLists from '../../Dashboard/BookingLists/BookingLists';
-import AddProduct from '../../AllProducts/AddProduct';
+import AddProduct from '../../allServices/AddService';
 
 const Dashboard = () => {
     return (

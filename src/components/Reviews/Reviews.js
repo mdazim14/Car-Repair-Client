@@ -4,7 +4,6 @@ import ReviewCard from './ReviewCard';
 import './Reviews.css';
 
 const Reviews = () => {
-
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -14,8 +13,6 @@ const Reviews = () => {
                 setReviews(data);
             })
     }, [])
-
-
 
     return (
         <div>
@@ -33,7 +30,6 @@ const Reviews = () => {
                         reviews.map(review => <ReviewCard reviews={review} key={review._id}></ReviewCard>)
                     }
                 </div>
-
 
             </CardDeck>
 

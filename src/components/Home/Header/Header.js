@@ -1,5 +1,5 @@
 import React from 'react';
-import AllProducts from '../../AllProducts/AllProducts';
+import AddService from '../../allServices/AllService';
 import HeaderMain from '../HeaderMain/HeaderMain';
 import Contact from '../../Contact/Contact';
 import Footer from '../Footer/Footer';
@@ -11,7 +11,7 @@ const Header = () => {
         <div>
             
             <HeaderMain></HeaderMain>
-            <AllProducts></AllProducts>
+            <AddService></AddService>
             <AllNews></AllNews>
 
             <Reviews></Reviews>

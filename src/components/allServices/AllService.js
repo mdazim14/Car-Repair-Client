@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { CardDeck, Card } from 'react-bootstrap';
-import ProductCard from './ProductCard';
+import ServicesCard from './ServicesCard';
 
-const AllProducts = () => {
+const AllService = () => {
 
-    const [reviews, setReviews] = useState([]);
+    const [service, setService] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3011/getServiceItem')
             .then(res => res.json())
             .then(data => {
-                setReviews(data);
+                setService(data);
             })
     }, [])
 
@@ -30,7 +30,7 @@ const AllProducts = () => {
                 
                 <div className="d-flex mt-5 mb-5 flex-wrap">
                     {
-                        reviews.map(product => <ProductCard products={product} key={product._id}></ProductCard>)
+                        service.map(product => <ServicesCard products={product} key={product._id}></ServicesCard>)
                     }
                 </div>
 
@@ -41,4 +41,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default AllService;
