@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Login from './components/Login/Login';
 import Navigationbar from './components/Home/Navigationbar/Navigationbar';
+import AboutUs from './components/AboutUs/AboutUs';
 
 
 export const userContext = createContext();
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs></AboutUs>
           </Route>
           <Route path="/login">
             <Login></Login>

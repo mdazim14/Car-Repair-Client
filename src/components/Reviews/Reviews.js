@@ -18,8 +18,8 @@ const Reviews = () => {
         <div>
             <div>
                 <div className="d-flex justify-content-center">
-                    <div className="ReviewsTopStyle d-flex align-items-center flex-column p-2 w-100 border-warning">
-                        <h1>Our Reviews</h1>
+                    <div className="bg-primary text-white d-flex align-items-center flex-column p-3 w-100">
+                        <h1>Our Client Reviews</h1>
                     </div>
                 </div>
             </div>

@@ -18,8 +18,8 @@ const AllService = () => {
         <div>
             <div>
                 <div className="d-flex justify-content-center">
-                    <div className=" bg-danger text-white d-flex align-items-center flex-column p-2 w-100">
-                        <h1>Our Services</h1>
+                    <div className=" bg-danger text-white d-flex align-items-center flex-column p-3 w-100">
+                        <h1>Our vehicle services</h1>
                     </div>
                 </div>
             </div>

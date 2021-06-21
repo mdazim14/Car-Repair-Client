@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import logo from '../../../images/logo.webp';
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,13 +16,20 @@ const Navigationbar = () => {
     const { displayName, photoURL, email } = loggedInUser;
     return (
         <Navbar className="navBarStyle pl-5 pr-5" collapseOnSelect expand="lg">
-            <Navbar.Brand className="bg-dark text-white rounded p-2 font-weight-bold" to="#home">Car-Repair</Navbar.Brand>
+            {/* <Navbar.Brand className="bg-dark text-white rounded p-2 font-weight-bold" to="#home">Car-Repair</Navbar.Brand> */}
+            <Navbar.Brand to="#home"> <img
+                src={logo}
+                width="150"
+                height="40"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+            /></Navbar.Brand>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto">
                     <Link className="nav-link mr-3 ml-3 bg-dark rounded font-weight-bold text-white" to="/home">Home</Link>
-                    <Link className="nav-link mr-3 ml-3 bg-dark rounded font-weight-bold text-white" to="">About Us</Link>
+                    <Link className="nav-link mr-3 ml-3 bg-dark rounded font-weight-bold text-white" to="/aboutUs">About Us</Link>
                     <Link className="nav-link mr-3 ml-3 bg-dark rounded font-weight-bold text-white" to="/contact">Contact</Link>
                     <Link className="nav-link mr-3 ml-3  bg-dark rounded font-weight-bold text-white" to="/dashboard/bookService">Dashboard</Link>
                     {

@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faTools, faUserAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+
 import './ServicesCard.css';
 
 const ServicesCard = ({ products }) => {
@@ -18,8 +21,8 @@ const ServicesCard = ({ products }) => {
     return (
         <div className=" m-auto">
             <Card style={{ width: '350px', height: '450px', margin: '10px', backgroundColor: 'rgb(90, 219, 236)' }}>
-                <Card.Img variant="top" style={{ width: '90px', borderRadius: '50%', margin: 'auto', marginTop: '15px' }} src={products.image} />
-                <h1 className="text-center border p-4">Service Image</h1>
+                {/* <Card.Img  src={products.image} /> */}
+                <FontAwesomeIcon variant="top" style={{ width: '150px', height: '150px', borderRadius: '50%', margin: 'auto', marginTop: '15px' }} icon={faTools} />
                 <Card.Body >
                     <Card.Title className="text-center mb-5 mt-5">{products.serviceName}</Card.Title>
                     <Card.Text className="text-left">

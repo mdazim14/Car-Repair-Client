@@ -10,7 +10,7 @@ const NewsCard = ({ info }) => {
                 <img src={info.img} style={{ width: '200px', border: '1px solid red', height: '200px', borderRadius: '100%' }} alt="" />
                 <div className="">
                     <h3 className="mt-3">Tesla Created New Robot Car</h3>
-                    <p>{info.description}</p>
+                    <p className="mt-5">{info.description}</p>
                 </div>
                 <div className="">
                     <h5 className="">Today's News</h5>

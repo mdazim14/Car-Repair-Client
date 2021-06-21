@@ -4,7 +4,7 @@ import HeaderMain from '../HeaderMain/HeaderMain';
 import Contact from '../../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Reviews from '../../Reviews/Reviews';
-import AllNews from '../NewsComponent/AllNews';
+import AllNews from '../NewsAll/AllNews';
 
 const Header = () => {
     return (
