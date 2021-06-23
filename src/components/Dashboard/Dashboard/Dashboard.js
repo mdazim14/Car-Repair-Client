@@ -10,12 +10,13 @@ import Sidebar from '../Sidebar/Sidebar';
 import './Dashboard.css';
 import Book from '../Book/Book';
 // import Navigationbar from '../../Home/Navigationbar/Navigationbar';
-import Home from '../../Home/Home/Home';
+// import Home from '../../Home/Home/Home';
 import OrderList from '../../Admin/OrderList/OrderList';
 import AddReviews from '../../Reviews/AddReview';
 import BookingLists from '../../Dashboard/BookingLists/BookingLists';
 import AddProduct from '../../allServices/AddService';
-
+import MakeAdmin from '../../Admin/MakeAdmin/MakeAdmin';
+import AdminList from '../../Admin/Admin/AdminList';
 const Dashboard = () => {
     return (
         <div>
@@ -45,6 +46,12 @@ const Dashboard = () => {
                             </Route>
                             <Route  path="/dashboard/addProduct">
                                 <AddProduct></AddProduct>
+                            </Route>
+                            <Route  path="/dashboard/makeAdmin">
+                                <MakeAdmin></MakeAdmin>
+                            </Route>
+                            <Route  path="/dashboard/adminList">
+                                <AdminList></AdminList>
                             </Route>
 
                         </Switch>

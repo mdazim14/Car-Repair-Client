@@ -12,7 +12,7 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Login from './components/Login/Login';
 import Navigationbar from './components/Home/Navigationbar/Navigationbar';
 import AboutUs from './components/AboutUs/AboutUs';
-
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const userContext = createContext();
 function App() {
@@ -39,9 +39,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/dashboard/bookService">
+          <PrivateRoute  path="/dashboard/bookService">
             <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </userContext.Provider>

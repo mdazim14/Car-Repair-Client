@@ -33,17 +33,18 @@ const AddReview = () => {
     }
     return (
         <div>
+
+            <form className="mt-5 p-5 bg-info text-white" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-white">This is review new</h1>
 
-            <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                        <label>Your name</label>
+                    <div className="form-group ">
+                        <h4>Your name</h4>
                         <input style={{ border: '1px solid rgba(10, 10, 10, 0.192)', marginBottom: '5px' }} placeholder="Enter Your Name" type="text" {...register("name", { required: true })} />
                         {errors.name && <span className="text-danger">This field is required</span>}
                     </div>
-                    <div className="form-group">
+                    <div className="form-group ">
                         {/* <input style={{ border: '1px solid rgba(10, 10, 10, 0.192)' }} placeholder="Enter Your Title" type="text" {...register("title", { required: true })} /> */}
-                        <label>Choose Your Answer</label>
+                        <h4>Choose Your Answer</h4>
                         <select className="border w-100 pt-2 pb-2 text-danger" {...register("status", { required: true })}>
                             <option >Satisfied</option>
                             <option>very Satisfied</option>
@@ -54,7 +55,7 @@ const AddReview = () => {
                         {errors.status && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group ">
-                    <label>Description</label>
+                    <h4>Description</h4>
                         <textarea className="pt-3 pl-3" style={{ border: '1px solid rgba(10, 10, 10, 0.192)',width:'100%' }} placeholder="Enter Your Review Details" {...register("description", { required: true })} />
                         {errors.description && <span className="text-danger">This field is required</span>}
                     </div>

@@ -17,10 +17,8 @@ const BookingLists = (props) => {
             .then(data => setBookingList(data))
     }, [])
     let count = 1;
-    // console.log("Boking list",bookingList);
 
-
-    // const deleteProduct = (id) => {
+    // const deleteService = (id) => {
     //     fetch(`http://localhost:3011/${id}`, {
     //         method: 'DELETE'
     //     })
@@ -51,6 +49,7 @@ const BookingLists = (props) => {
                         {
                             bookingList.map(products => <BookingListCard count={count++} products={products.Product }> </BookingListCard>)
                         }
+
                     </tbody>
                 </Table>
             </div>

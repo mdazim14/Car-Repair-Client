@@ -64,8 +64,9 @@ const Book = () => {
                         </tbody>
                     </Table>
 
-                    {booking &&
-                        <button onClick={() => { handleCheckOut() }} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
+                    {
+                    booking &&
+                    <button onClick={() => { handleCheckOut() }} className="btn d-flex justify-content-center m-auto btn-primary" type="">Place Order</button>
                     }
                 </div>
             </div>

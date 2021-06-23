@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faTools, faUserAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 import './ServicesCard.css';
